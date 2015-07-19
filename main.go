@@ -89,7 +89,7 @@ func getNames(contributors []github.Contributor) []string {
 		if user.Name == nil {
 			name = ""
 		} else {
-			name = *user.Name
+			name = strings.Split(*user.Name, " ")[0]
 		}
 		names = append(names, name)
 	}
